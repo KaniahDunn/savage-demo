@@ -5,7 +5,7 @@ const MongoClient = require('mongodb').MongoClient
 
 var db, collection;
 
-const url = "mongodb+srv://demo:demo@cluster0-q2ojb.mongodb.net/test?retryWrites=true";
+const url = "mongodb+srv://jayden:april2017@cluster0-n3msl.mongodb.net/test?retryWrites=true&w=majority";
 const dbName = "demo";
 
 app.listen(3000, () => {
@@ -45,7 +45,23 @@ app.put('/messages', (req, res) => {
     $set: {
       thumbUp:req.body.thumbUp + 1
     }
-  }, {
+  },{
+    // searches through the DOM top to bottom and when the number is +1 the DOM is searched bottom to top
+    sort: {_id: -1},
+    upsert: true
+  }, (err, result) => {
+    if (err) return res.send(err)
+    res.send(result)
+  })
+})
+app.put('/messagesDown', (req, res) => {
+  db.collection('messages')
+  .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
+    $set: {
+      thumbUp:req.body.thumbUp - 1
+    }
+  },{
+    // searches through the DOM top to bottom and when the number is +1 the DOM is searched bottom to top
     sort: {_id: -1},
     upsert: true
   }, (err, result) => {

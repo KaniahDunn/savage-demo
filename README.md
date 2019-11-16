@@ -1,4 +1,8 @@
-![21 Savage](public/21savage.jpg)
+### 21 Savage Fan Site
+
+## Goal: Create a web application where users can add fan messages to a message board. Users can then up vote, down vote a message or delete messages.
+
+![21 Savage](21savage.png)
 
 ## Installation
 

@@ -1,6 +1,43 @@
 body{
-  background: red;
+  background: grey;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 10px;
+}
+h1{
+  font-size: 5rem;
+  text-align: center;
+}
+h2{
+  font-size: 2rem;
+  text-align: center;
 }
 h3{
+  font-size: 1.8rem;
   margin-top: 40px;
+}
+::placeholder{
+  color: black;
+}
+span{
+  font-size: 1.5rem;
+}
+form {
+  margin-left: 30%;
+}
+input{
+  font-size: 1.5rem;
+  text-align: center;
+  background: transparent;
+  border: 2px solid black;
+  border-radius: 4%;
+  padding: .5%;
+  margin: 1%;
+}
+button{
+  font-size: 1.5rem;
+  border: 2px solid red;
+  border-radius: 4%;
+  background: transparent;
+  padding: .5%;
+  margin-left: 2%;
 }
