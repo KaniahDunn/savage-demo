@@ -4,7 +4,7 @@
 
 ![21 Savage](savage.png)
 
-Technologies Used:
+## Technologies Used:
 - ejs
 - javascript
 - nodejs
